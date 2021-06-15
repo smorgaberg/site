@@ -131,7 +131,7 @@ function init1(){
             gamma +90;
 
             //ball.style.top = (maxX*beta/180 + 100) + "px";
-            playOneX.style.left = (maxY*gamma/180 + 100) + "px";
+            playerOne.style.left = (maxY*gamma/180 + 100) + "px";
             
         }, false);
     }
