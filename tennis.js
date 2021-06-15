@@ -125,6 +125,13 @@ function init1(){
 
             moveBall(24);
 
+            if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
+                if( parseInt(top) < 200 ) {
+                    top = "20px"; 
+                } else {
+                top = "289px";
+                }
+            }
             //볼을 움직이자.
             if(beta > 90) {beta = 90};
             if(beta < -90) {beta = -90};
@@ -145,13 +152,6 @@ function init1(){
             var z = event.accelerationIncludingGravity.z;
             //var r = event.accelerationIncludingGravity.r;
           
-            if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
-                if( parseInt(top) < 200 ) {
-                    top = "20px"; 
-                } else {
-                top = "289px";
-                }
-            }
 
             var html = "x: " +x+ "<br>y: "+y+ "<br>z: " +z;
             dataContainerMotion.innerHTML = html;
