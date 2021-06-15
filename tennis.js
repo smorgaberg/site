@@ -104,7 +104,7 @@ function init1(){
     
     var garden = document.getElementById("garden");
     var playOneX = document.getElementById("playerOne");
-    var supportsVibrate = "vibrate" in navigator;
+    
     var maxX = garden.clientWidth * 2 - playOneX.clientWidth;
     var maxY = garden.clientHeight * 2- playOneX.clientHeight; //ball를 playonex 로 바꿈
     
@@ -131,7 +131,7 @@ function init1(){
             gamma +90;
 
             //ball.style.top = (maxX*beta/180 + 100) + "px";
-            playerOne.style.left = (maxY*gamma/180 + 100) + "px";
+            playOneX.style.left = (maxY*gamma/180 + 100) + "px";
             
         }, false);
     }
