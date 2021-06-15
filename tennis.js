@@ -109,7 +109,7 @@ function init1(){
     var maxY = garden.clientHeight * 2- playOneX.clientHeight; //ball를 playonex 로 바꿈
     
     //alert(maxY);
-
+moveBall();
 
     //가속도계가 기기의 방향의 변화를 감지 했을때
     if(window.DeviceOrientationEvent){
