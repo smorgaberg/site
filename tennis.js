@@ -103,7 +103,7 @@ function init1(){
     var dataContainerMotion = document.getElementById('dataContainerMotion');
     
     var garden = document.getElementById("garden");
-    var playOneX = document.getElementById("playerOne")
+    var playOneX = document.getElementById("playerOne");
     var supportsVibrate = "vibrate" in navigator;
     var maxX = garden.clientWidth * 2 - playOneX.clientWidth;
     var maxY = garden.clientHeight * 2- playOneX.clientHeight; //ball를 playonex 로 바꿈
