@@ -97,7 +97,7 @@ function moveObjAtAngle( obj, ang, dist ) {
 
 
 //-------------------------------------------------------------------------------------------
-function init(){
+function init1(){
     //Find out Div Element
     var dataContainerOrientation = document.getElementById('dataContainerOrientation');
     var dataContainerMotion = document.getElementById('dataContainerMotion');
@@ -217,4 +217,4 @@ function restartGame() {
     init();
 }
 
-document.onmouseup = init;
+document.ontouchend = init;
