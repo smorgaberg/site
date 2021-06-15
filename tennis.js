@@ -94,7 +94,10 @@ function moveObjAtAngle( obj, ang, dist ) {
         top = parseInt(top) - ( dist * Math.sin( ang * (Math.PI/180) ) ) + "px";
     }
 }
-/*function init(){
+
+
+//-------------------------------------------------------------------------------------------
+function init(){
     //Find out Div Element
     var dataContainerOrientation = document.getElementById('dataContainerOrientation');
     var dataContainerMotion = document.getElementById('dataContainerMotion');
@@ -159,7 +162,9 @@ function moveObjAtAngle( obj, ang, dist ) {
 
 
 
-}*/
+}
+
+//-------------------------------------------------------------------------------------------------
 // AI 라켓
 function moveAI( y ) {
     var AI = document.getElementById("playerTwo");
