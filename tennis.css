@@ -36,7 +36,7 @@ body{
   left: 45px;
   width: 35px;
   height: 35px;
-  background-image: url(../assets/img/tennis-racket.svg);
+  background-image: url(tennis-racket.svg);
   background-size: cover;
   z-index: 2;
   }
@@ -46,7 +46,7 @@ body{
   left: 390px;
   width: 35px;
   height: 35px;
-  background-image: url(../assets/img/tennis-racket.svg);
+  background-image: url(tennis-racket.svg);
   background-size: cover;
   z-index: 2;
   }
@@ -57,7 +57,7 @@ body{
   width: 10px;
   height: 10px;
   clip: rect(0px 10px 10px 0px);
-  background-image: url(../assets/img/tennis-ball.svg);
+  background-image: url(tennis-ball.svg);
   background-size: cover;
   z-index: 2;
   display: none;
