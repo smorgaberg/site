@@ -101,12 +101,12 @@ function init1(){
     //Find out Div Element
     var dataContainerOrientation = document.getElementById('dataContainerOrientation');
     var dataContainerMotion = document.getElementById('dataContainerMotion');
-    var ball = document.getElementById("ball");
+    
     var garden = document.getElementById("garden");
     var playOneX = document.getElementById("playerOne")
     var supportsVibrate = "vibrate" in navigator;
-    var maxX = garden.clientWidth * 2 - ball.clientWidth;
-    var maxY = garden.clientHeight * 2- ball.clientHeight;
+    var maxX = garden.clientWidth * 2 - playOneX.clientWidth;
+    var maxY = garden.clientHeight * 2- playOneX.clientHeight; //ball를 playonex 로 바꿈
     
     //alert(maxY);
 
