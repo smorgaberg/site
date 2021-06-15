@@ -22,15 +22,15 @@ function init() {
 }
 
 // 사용자가 라켓 이동
-function movePaddle(e) {
+/*function movePaddle(e) {
     e = (e)?e:event;
     if( tempY ) {
-    mouseSpeed = Math.round((e.clientY - tempY) * 1.5);
-    if( mouseSpeed == 0 ) mouseSpeed = 1;
+        mouseSpeed = Math.round((e.clientY - tempY) * 1.5);
+        if( mouseSpeed == 0 ) mouseSpeed = 1;
     }
     with( document.getElementById("playerOne").style ) {
         top = e.clientY - 18 + "px";
-        if( parseInt(top) < 24 || parseInt(top) > 289 ) { /*리미트 되는 공간 크기*/
+        if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
             if( parseInt(top) < 200 ) {
                 top = "20px"; 
             } else {
@@ -39,7 +39,7 @@ function movePaddle(e) {
         }
     }   
 tempY = e.clientY;
-}
+}*/
 
 // 공의 움직임
     function moveBall() {
@@ -103,9 +103,11 @@ function init(){
     var dataContainerMotion = document.getElementById('dataContainerMotion');
     var ball = document.getElementById("ball");
     var garden = document.getElementById("garden");
+    var playOneX = document.getElementById("playerOne")
     var supportsVibrate = "vibrate" in navigator;
     var maxX = garden.clientWidth * 2 - ball.clientWidth;
     var maxY = garden.clientHeight * 2- ball.clientHeight;
+    
     //alert(maxY);
 
 
@@ -128,8 +130,8 @@ function init(){
             beta +90;
             gamma +90;
 
-            ball.style.top = (maxX*beta/180 + 100) + "px";
-            ball.style.left = (maxY*gamma/180 + 100) + "px";
+            //ball.style.top = (maxX*beta/180 + 100) + "px";
+            playOneX.style.left = (maxY*gamma/180 + 100) + "px";
             
         }, false);
     }
