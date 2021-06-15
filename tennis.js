@@ -123,6 +123,7 @@ function init1(){
             var html =  "absolute: " +absolute+ "<br>alpha: " +alpha+ "<br>bata: " +beta+ "<br>gamma: "+ gamma; 
             dataContainerOrientation.innerHTML = html;	
 
+            moveBall(24);
 
             //볼을 움직이자.
             if(beta > 90) {beta = 90};
@@ -150,14 +151,7 @@ function init1(){
             var html = "x: " +x+ "<br>y: "+y+ "<br>z: " +z;
             dataContainerMotion.innerHTML = html;
 
-            if(y > 5){
-                
-                var a = 400;
-        play1();
-        startVibrate(a);
-
-
-    }
+           
 
         }, true);
     }
