@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>tennis</title>
+        <link rel="stylesheet" href="tennis.css">
+        <link rel="stylesheet" href="../btnall.css">
+    </head>
+<body>
+    <audio id="audio1" autoplay>
+        <source src="../sound/테니스.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+      <a href="../qr/qr.html" ><button class="btn-2 tennis"
+        type="button" onclick="pause1()" id="btn" style="display: none;">이제 진짜 움직여보기</button></a>
+<div class="container px-4 px-lg-5 text-center">
+    <div id="all"> 
+        <div id="pongTable">
+        <div style="float: right; width: 50%; height: 100%; border-left: 2px dashed #DDD;"> </div>
+        </div>
+        <div id="playerOne" style="left: 45px; top: 146px">  </div>
+        <div id="playerTwo" style="left: 390px; top: 146px"> </div>
+        <div id="ball" style="left: 210px; top: 160px"> </div>
+        <div id="click">누르면 테니스 시작합니다!</div>
+        <div id="scores">
+        <span style="float: left;" id="oneScore">0</span>
+        <span style="float: right;" id="twoScore">0</span>
+        <div id="container"></div>
+            <script src="bike.js"></script>
+            <div id="dataContainerOrientation" class="data"></div>
+            <div id="dataContainerMotion" class="data"></div>
+            <div id="garden">
+                <div id="ball" class="ball"></div>
+            </div>
+        </div></div>
+            <script src="tennis.js"></script>
+    <!--<a class="btn btn-primary btn-xl" href="#third" onclick="pause2(), play3()">다음으로</a>-->
+</div>
+</body>
+</html>
+
