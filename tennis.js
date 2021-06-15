@@ -16,7 +16,7 @@ function init() {
         left = "210px";
     }
     document.onmouseup = null;
-    document.onmousemove = movePaddle;
+    document.onmousemove = init1;
     ballAng = Math.round( Math.random() * 100 ) + 130;
     moveDaBall = setInterval("moveBall()", 24); // 공 스피드
 }
