@@ -5,6 +5,9 @@ var pong = 0;
 var mouseSpeed;
 var tempY;
 var btn=document.getElementById("btn");
+var src = document.getElementById("source");
+var clientX, clientY;
+
 setTimeout(function() {
     btn.style.display='block';
   }, 10000);
@@ -95,9 +98,22 @@ function moveObjAtAngle( obj, ang, dist ) {
     }
 }
 
+document.addEventListener('touchstart', function(e) {
+    // Cache the client X/Y coordinates
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+    console.log(clientX+clientY);
+  }, false);
+
+
+
+
+
+
+
 
 //-------------------------------------------------------------------------------------------
-function init1(){
+/*function init1(){
     //Find out Div Element
     var dataContainerOrientation = document.getElementById('dataContainerOrientation');
     var dataContainerMotion = document.getElementById('dataContainerMotion');
@@ -125,13 +141,7 @@ function init1(){
 
             moveBall(24);
 
-            if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
-                if( parseInt(top) < 200 ) {
-                    top = "20px"; 
-                } else {
-                top = "289px";
-                }
-            }
+          
             //볼을 움직이자.
             if(beta > 90) {beta = 90};
             if(beta < -90) {beta = -90};
@@ -163,8 +173,8 @@ function init1(){
 
 
 
-}
-
+}   
+*/
 //-------------------------------------------------------------------------------------------------
 // AI 라켓
 function moveAI( y ) {
