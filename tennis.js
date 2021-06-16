@@ -19,7 +19,7 @@ function init() {
         left = "210px";
     }
     document.onmouseup = null;
-    document.onmousemove = init1;
+    document.onmousemove = init2;
     ballAng = Math.round( Math.random() * 100 ) + 130;
     moveDaBall = setInterval("moveBall()", 24); // 공 스피드
 }
@@ -98,14 +98,28 @@ function moveObjAtAngle( obj, ang, dist ) {
     }
 }
 
+
+
+function init2(){
 document.addEventListener('touchstart', function(e) {
     // Cache the client X/Y coordinates
     clientX = e.touches[0].clientX;
     clientY = e.touches[0].clientY;
-    console.log(clientX+clientY);
-  }, false);
+    console.log(clientY);
+}, false);
+with( document.getElementById("playerOne").style ) {
+    top = clientY - 18 + "px";
+    if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
+        if( parseInt(top) < 200 ) {
+            top = "20px"; 
+        } else {
+        top = "289px";
+        }
+    }
+}   
+tempY = clientY;
 
-
+}
 
 
 
