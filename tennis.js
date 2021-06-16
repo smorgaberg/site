@@ -7,7 +7,7 @@ var tempY;
 var btn=document.getElementById("btn");
 var src = document.getElementById("source");
 var clientX, clientY;
-
+var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
 setTimeout(function() {
     btn.style.display='block';
   }, 10000);
@@ -19,30 +19,45 @@ function init() {
         left = "210px";
     }
     document.onmouseup = null;
-    document.onmousemove = init2;
+    document.onpointerdown= movePaddle;
     ballAng = Math.round( Math.random() * 100 ) + 130;
     moveDaBall = setInterval("moveBall()", 24); // 공 스피드
 }
 
 // 사용자가 라켓 이동
-/*function movePaddle(e) {
-    e = (e)?e:event;
-    if( tempY ) {
-        mouseSpeed = Math.round((e.clientY - tempY) * 1.5);
-        if( mouseSpeed == 0 ) mouseSpeed = 1;
-    }
-    with( document.getElementById("playerOne").style ) {
-        top = e.clientY - 18 + "px";
-        if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
-            if( parseInt(top) < 200 ) {
-                top = "20px"; 
-            } else {
-            top = "289px";
+function movePaddle(e) {
+        var ispressed=true;
+        document.addEventListener("pointerup",function(e){
+            ispressed=false;
+        });
+        document.addEventListener("pointermove",function(e){
+            if(ispressed){
+            e = (e)?e:event;
+            if( tempY ) {
+                mouseSpeed = Math.round((e.clientY - tempY) * 1.5);
+                if( mouseSpeed == 0 ) mouseSpeed = 1;
             }
-        }
-    }   
-tempY = e.clientY;
-}*/
+            with( document.getElementById("playerOne").style ) {
+                top = e.clientY - 18 + "px";
+                if( parseInt(top) < 24 || parseInt(top) > 289 ) { //리미트 되는 공간 크기
+                    if( parseInt(top) < 200 ) {
+                        top = "20px"; 
+                    } else {
+                    top = "289px";
+                    }
+                }
+            }   
+        tempY = e.clientY;
+            }
+        });
+        
+
+
+//if(isMobile!=false){}
+
+
+
+}
 
 // 공의 움직임
     function moveBall() {
@@ -99,7 +114,7 @@ function moveObjAtAngle( obj, ang, dist ) {
 }
 
 
-
+/*
 function init2(){
 document.addEventListener('touchstart', function(e) {
     // Cache the client X/Y coordinates
@@ -119,7 +134,7 @@ with( document.getElementById("playerOne").style ) {
 }   
 tempY = clientY;
 
-}
+}*/
 
 
 
@@ -240,4 +255,4 @@ function restartGame() {
     init();
 }
 
-document.ontouchend = init;
+document.onmouseup=init;
